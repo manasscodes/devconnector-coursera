@@ -79,8 +79,8 @@ devconnector-mern/
 
 ```bash
 # Clone this repository
-git clone https://github.com/codewmanas/devconnector-mern.git
-cd devconnector-mern
+git clone https://github.com/codewmanas/devconnector-coursera.git
+cd devconnector-coursera
 
 # Install server dependencies
 cd server
