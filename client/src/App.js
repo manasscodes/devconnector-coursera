@@ -11,6 +11,8 @@ import setAuthToken from "./utils/setAuthToken";
 // Redux
 import { Provider } from "react-redux";
 import store from "./store";
+import Dashboard from "./components/dashboard/Dashboard";
+import PrivateRoute from "./components/routing/PrivateRoute";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -45,6 +47,17 @@ const App = () => {
                   <Alert />
                   <Login />
                 </section>
+              }
+            />
+            <Route
+              path="/dashboard"
+              element={
+                <PrivateRoute>
+                  <section className="container">
+                    <Alert />
+                    <Dashboard />
+                  </section>
+                </PrivateRoute>
               }
             />
           </Routes>
