@@ -12,6 +12,7 @@ import setAuthToken from "./utils/setAuthToken";
 import { Provider } from "react-redux";
 import store from "./store";
 import Dashboard from "./components/dashboard/Dashboard";
+import CreateProfile from "./components/profile-forms/CreateProfile";
 import PrivateRoute from "./components/routing/PrivateRoute";
 
 if (localStorage.token) {
@@ -56,6 +57,17 @@ const App = () => {
                   <section className="container">
                     <Alert />
                     <Dashboard />
+                  </section>
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/create-profile"
+              element={
+                <PrivateRoute>
+                  <section className="container">
+                    <Alert />
+                    <CreateProfile />
                   </section>
                 </PrivateRoute>
               }
