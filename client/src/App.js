@@ -13,6 +13,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import Dashboard from "./components/dashboard/Dashboard";
 import CreateProfile from "./components/profile-forms/CreateProfile";
+import EditProfile from "./components/profile-forms/EditProfile";
 import PrivateRoute from "./components/routing/PrivateRoute";
 
 if (localStorage.token) {
@@ -68,6 +69,17 @@ const App = () => {
                   <section className="container">
                     <Alert />
                     <CreateProfile />
+                  </section>
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/edit-profile"
+              element={
+                <PrivateRoute>
+                  <section className="container">
+                    <Alert />
+                    <EditProfile />
                   </section>
                 </PrivateRoute>
               }
