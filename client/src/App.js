@@ -14,6 +14,8 @@ import store from "./store";
 import Dashboard from "./components/dashboard/Dashboard";
 import CreateProfile from "./components/profile-forms/CreateProfile";
 import EditProfile from "./components/profile-forms/EditProfile";
+import AddExperience from "./components/profile-forms/AddExperience";
+import AddEducation from "./components/profile-forms/AddEducation";
 import PrivateRoute from "./components/routing/PrivateRoute";
 
 if (localStorage.token) {
@@ -80,6 +82,28 @@ const App = () => {
                   <section className="container">
                     <Alert />
                     <EditProfile />
+                  </section>
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/add-experience"
+              element={
+                <PrivateRoute>
+                  <section className="container">
+                    <Alert />
+                    <AddExperience />
+                  </section>
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/add-education"
+              element={
+                <PrivateRoute>
+                  <section className="container">
+                    <Alert />
+                    <AddEducation />
                   </section>
                 </PrivateRoute>
               }
