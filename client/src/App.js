@@ -16,6 +16,7 @@ import CreateProfile from "./components/profile-forms/CreateProfile";
 import EditProfile from "./components/profile-forms/EditProfile";
 import AddExperience from "./components/profile-forms/AddExperience";
 import AddEducation from "./components/profile-forms/AddEducation";
+import Profiles from "./components/profiles/Profiles";
 import PrivateRoute from "./components/routing/PrivateRoute";
 
 if (localStorage.token) {
@@ -50,6 +51,15 @@ const App = () => {
                 <section className="container">
                   <Alert />
                   <Login />
+                </section>
+              }
+            />
+            <Route
+              path="/profiles"
+              element={
+                <section className="container">
+                  <Alert />
+                  <Profiles />
                 </section>
               }
             />
