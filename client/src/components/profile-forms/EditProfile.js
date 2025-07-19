@@ -39,7 +39,7 @@ const EditProfile = ({ profile: { profile , loading },createProfile, getCurrentP
       linkedin: loading || !profile.linkedin ? "" : profile.linkedin,
       instagram: loading || !profile.instagram ? "" : profile.instagram,
      });
-  },[loading]);
+  },[loading, getCurrentProfile]);
 
   const {
     company,

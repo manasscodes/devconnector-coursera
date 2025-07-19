@@ -17,6 +17,7 @@ import EditProfile from "./components/profile-forms/EditProfile";
 import AddExperience from "./components/profile-forms/AddExperience";
 import AddEducation from "./components/profile-forms/AddEducation";
 import Profiles from "./components/profiles/Profiles";
+import Profile from "./components/profile/Profile";
 import PrivateRoute from "./components/routing/PrivateRoute";
 
 if (localStorage.token) {
@@ -60,6 +61,15 @@ const App = () => {
                 <section className="container">
                   <Alert />
                   <Profiles />
+                </section>
+              }
+            />
+            <Route
+              path="/profile/:id"
+              element={
+                <section className="container">
+                  <Alert />
+                  <Profile />
                 </section>
               }
             />
