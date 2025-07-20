@@ -6,6 +6,7 @@ import Spinner from "../layout/Spinner";
 import ProfileTop from "./ProfileTop";
 import ProfileAbout from "./ProfileAbout";
 import ProfileExperience from "./ProfileExperience";
+import ProfileGithub from "./ProfileGithub";
 import ProfileEducation from "./ProfileEducation";
 import { Link, useParams } from "react-router-dom";
 
@@ -59,6 +60,10 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth }) => {
                     <h4>No education credentials</h4>
                )}
                </div>
+
+               {
+            profile.githubusername && ( <ProfileGithub username={profile.githubusername} /> )
+               }
           </div>
         </Fragment>
       )}
