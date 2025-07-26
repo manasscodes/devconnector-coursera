@@ -31,6 +31,11 @@ A full-stack MERN social network application designed specifically for developer
 
 ---
 
+<p align="center">
+  <img src="./image.png" alt="Certificate" />
+</p>
+
+
 ## 🎯 Overview
 
 DevConnector is a comprehensive social networking platform tailored for software developers. The application enables developers to:
